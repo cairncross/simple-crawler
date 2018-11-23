@@ -9,10 +9,10 @@ public class Application {
         Crawler crawler = new Crawler(startUrl, domain);
         TreeNode root = crawler.run();
         String result = root.print(root, "", true);
-        // System.out.println(result);
-        try (PrintWriter out = new PrintWriter("" + domain + "-sitemap.txt")) {
+        System.out.println(result);
+        try (PrintWriter out = new PrintWriter("" + domain + "-sitemap")) {
             out.println(result);
-            System.out.println("created " + domain + "-sitemap.txt in project root directory");
+            System.out.println("created " + domain + "-sitemap");
         }
     }
 }
