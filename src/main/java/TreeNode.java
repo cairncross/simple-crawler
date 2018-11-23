@@ -25,15 +25,16 @@ public class TreeNode {
         this.children = children;
     }
 
-    public void print(TreeNode node, String indent, boolean isLastChildElement)
-    {
-        System.out.println(indent + "+- " + node.getUrl());
+    public String print(TreeNode node, String indent, boolean isLastChildElement) {
+        String result = "";
+        result += indent + "+- " + node.getUrl() + "\n";
         indent += isLastChildElement ? "   " : "|  ";
 
         if (node.getChildren() != null) {
             for (int i = 0; i < node.getChildren().size(); i++) {
-                print(node.getChildren().get(i), indent, i == node.getChildren().size() - 1);
+                result += print(node.getChildren().get(i), indent, i == node.getChildren().size() - 1);
             }
         }
+        return result;
     }
 }
