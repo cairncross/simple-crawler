@@ -16,3 +16,14 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     testCompile 'org.assertj:assertj-core:3.11.1'
 }
+
+jar {
+    manifest {
+        // C:\Users\Euan\Workspace\simple-crawler\src\main\java\Application.java
+        attributes "Main-Class": "Application"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
