@@ -23,7 +23,7 @@ public class Crawler {
     }
 
 
-    public void run() {
+    public TreeNode run() {
         System.out.println("running...");
         TreeNode node;
         while(!queue.isEmpty()) {
@@ -34,6 +34,7 @@ public class Crawler {
             }
         }
         System.out.println("finished");
+        return root;
     }
 
     private List<TreeNode> crawl(String url) {

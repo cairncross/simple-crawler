@@ -24,4 +24,16 @@ public class TreeNode {
     public void setChildren(List<TreeNode> children) {
         this.children = children;
     }
+
+    public void print(TreeNode node, String indent, boolean isLastChildElement)
+    {
+        System.out.println(indent + "+- " + node.getUrl());
+        indent += isLastChildElement ? "   " : "|  ";
+
+        if (node.getChildren() != null) {
+            for (int i = 0; i < node.getChildren().size(); i++) {
+                print(node.getChildren().get(i), indent, i == node.getChildren().size() - 1);
+            }
+        }
+    }
 }
