@@ -4,8 +4,8 @@
 1. Clone the repo
 2. `./gradlew build`
 3a. `java -jar ./build/libs/simple-crawler-1.0-SNAPSHOT.jar [startUrl] [domain]`
--- Where `startUrl` is any page within `domain`
--- And a properly formed `domain` is of the form `mydomain.tld`
+- Where `startUrl` is any page within `domain`
+- And a properly formed `domain` is of the form `mydomain.tld`
 
 ## Explanation
 - The program takes two separate arguments for the `startUrl` and the `domain`
