@@ -18,7 +18,10 @@
 - It was clear that some form of tree structure would be required to represent the data
 - BFS is used to crawl sites, the assumption being that most sites do not have significant link depth
 
-## Given more time we could produce
-- A robust test suite could be put together
+## To-do
+Given more time we could produce:
+- A robust automated test suite
 -- Code would have to be re-written to be more easily testable
 - An appealing UI to present the sitemap possibly using a JS framework
+- A collection of sitemaps could be persisted
+-- Analytics could be produced on the sitemap dataset
