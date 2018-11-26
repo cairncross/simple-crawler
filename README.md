@@ -2,7 +2,7 @@
 
 ## Instructions
 1. Clone the repo
-2. `./gradlew build` 
+2. `./gradlew clean build` 
 3. `java -jar ./build/libs/simple-crawler-1.0-SNAPSHOT.jar [startUrl] [domain]` 
 - Where `startUrl` is any page within `domain`
 - And a properly formed `domain` is of the form `mydomain.tld`
